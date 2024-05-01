@@ -12,8 +12,53 @@
   src: url("") format("woff2"), url("") format("woff");
 }
 
-/* ******************************** */
 
-/* Colores */
+:root{
+  /* Colores */
+  --color-font-smartphone: rgb(58, 1, 55);
+  --color-font-tablet: rgb(57, 2, 78);
+  --color-font-desktop: rgb(255, 0, 100);
+  --bgcolor-body-smartphone: red;
+  --bgcolor-body-tablet: yellow;
+  --bgcolor-body-desktop: black;
+  --color: blue;
+  /* Tamaño Pantalla */
+  /* --size-body-smartphone: em;  px */ 
+  /* 768px */ 
+  --size-body-tablet: 48em; 
+  /* 1000px */
+  --size-body-desktop: 62.5em; 
+}
+
+/* ******************************** */
+/* Estilo General = Smartphone */ 
+body{
+  color: var(--color-font-smartphone);
+  background-color: var(--bgcolor-body-smartphone);
+}
+/* Estados Responsive */
+/* Tablet */
+@media only screen and (min-width: 48em){
+  body{
+    color: var(--color-font-tablet);
+    background-color: var(--bgcolor-body-tablet);
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 62.5em){
+  body{
+    color: var(--color-font-desktop);
+    background-color: var(--bgcolor-body-desktop);
+  }
+}
+/* ******************************** */
+/* ******************************** */
+/* Alinear */
+body{
+  
+}
+
+
+
 
 /* ******************************** */
