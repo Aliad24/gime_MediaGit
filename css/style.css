@@ -7,17 +7,33 @@
 /* *********************************** */
 
 /* Tipografía */
+/* Tipografía */
+
+/* Montserrat */
 @font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
+  font-family: "montserratRegular";
+  src: url("../font/montserratalternates-regular.woff2") format("woff2"),
+    url("../font/montserratalternates-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "montserratBold";
+  src: url("../font/montserratalternates-bold.woff2") format("woff2"),
+    url("../font/montserratalternates-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "montserratItalic";
+  src: url("../font/montserratalternates-italic.woff2") format("woff2"),
+    url("../font/montserratalternates-italic.woff") format("woff");
 }
 
 
 :root{
   /* Colores */
-  --color-font-smartphone: rgb(58, 1, 55);
-  --color-font-tablet: rgb(57, 2, 78);
-  --color-font-desktop: rgb(255, 0, 100);
+  --color-font-smartphone: rgb(255, 255, 255);
+  --color-font-tablet: rgb(255, 0, 0);
+  --color-font-desktop: rgb(251, 255, 0);
   --bgcolor-body-smartphone: red;
   --bgcolor-body-tablet: yellow;
   --bgcolor-body-desktop: black;
@@ -30,18 +46,32 @@
   --size-body-desktop: 62.5em; 
 }
 
+
 /* ******************************** */
 /* Estilo General = Smartphone */ 
 body{
-  color: var(--color-font-smartphone);
+  display: flex;
+
+
+  font-size: 100%;
   background-color: var(--bgcolor-body-smartphone);
+  
+  h1{
+    color: var(--color-font-smartphone);  
+  }
 }
+
 /* Estados Responsive */
 /* Tablet */
 @media only screen and (min-width: 48em){
+  
   body{
     color: var(--color-font-tablet);
     background-color: var(--bgcolor-body-tablet);
+    h1{
+      color: var(--color-font-tablet);  
+    }
+    
   }
 }
 /* Desktop */
@@ -49,15 +79,13 @@ body{
   body{
     color: var(--color-font-desktop);
     background-color: var(--bgcolor-body-desktop);
+    h1{
+      color: var(--color-font-desktop);  
+    }
   }
 }
 /* ******************************** */
 /* ******************************** */
-/* Alinear */
-body{
-  
-}
-
 
 
 
