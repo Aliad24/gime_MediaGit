@@ -31,57 +31,68 @@
 
 :root{
   /* Colores */
-  --color-font-smartphone: rgb(255, 255, 255);
-  --color-font-tablet: rgb(255, 0, 0);
-  --color-font-desktop: rgb(251, 255, 0);
+  --color-font-smartphone: black;
+  --color-font-tablet: blue;
+  --color-font-desktop: rgb(255, 0, 0);
   --bgcolor-body-smartphone: red;
   --bgcolor-body-tablet: yellow;
   --bgcolor-body-desktop: black;
-  --color: blue;
+  /* Fuente Principal */
+  --fuente-principal: sans-serif;
+
   /* Tamaño Pantalla */
   /* --size-body-smartphone: em;  px */ 
-  /* 768px */ 
+  /* 768px 
   --size-body-tablet: 48em; 
-  /* 1000px */
-  --size-body-desktop: 62.5em; 
+  /* 1200px 
+  --size-body-desktop: 75em; 
+  */
 }
 
 
 /* ******************************** */
 /* Estilo General = Smartphone */ 
 body{
+  height: 100vh;
+  font-family: var(--fuente-principal);
+  font-weight: 900; 
   display: flex;
-
-
-  font-size: 100%;
-  background-color: var(--bgcolor-body-smartphone);
+  align-items: center;
+  justify-content: center;
   
-  h1{
-    color: var(--color-font-smartphone);  
+  background-color: var(--bgcolor-body-smartphone);
+  color: var(--color-font-smartphone);
+
+  & h1{
+    font-size: 16vw;
   }
+  
 }
+
 
 /* Estados Responsive */
 /* Tablet */
-@media only screen and (min-width: 48em){
-  
+@media only screen and (min-width: 48em) and (orientation: portrait){
   body{
-    color: var(--color-font-tablet);
-    background-color: var(--bgcolor-body-tablet);
-    h1{
-      color: var(--color-font-tablet);  
+    background-color: var(--bgcolor-body-tablet);    
+    color: var(--color-font-tablet);  
+
+    & h1{
+      font-size: 10vw;
     }
     
   }
 }
 /* Desktop */
-@media only screen and (min-width: 62.5em){
+@media only screen and (min-width: 75em){
   body{
-    color: var(--color-font-desktop);
     background-color: var(--bgcolor-body-desktop);
-    h1{
-      color: var(--color-font-desktop);  
+    color: var(--color-font-desktop);  
+    
+    & h1{
+      font-size: 10vw;
     }
+    
   }
 }
 /* ******************************** */
